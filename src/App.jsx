@@ -15,8 +15,6 @@ export const App = () => {
   const [currentTabId, setCurrentTabId] = useState(tabs[0].id);
   const activeTab = tabs.find(tab => tab.id === currentTabId) || tabs[0];
 
-
-
   return (
     <div className="section">
       <h1 className="title">Selected tab is {`${activeTab.title}`}</h1>
@@ -25,9 +23,8 @@ export const App = () => {
         <div className="tabs is-boxed">
           <Tabs
             tabs={tabs}
-            activeId={currentTabId}
+            activeTabId={currentTabId}
             onTabSelected={setCurrentTabId}
-            activeTab={activeTab}
           />
         </div>
       </div>
