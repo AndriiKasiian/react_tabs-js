@@ -1,4 +1,6 @@
-export const Tabs = ({ tabs, activeId, onTabSelected, activeTab }) => {
+export const Tabs = ({ tabs, activeId, onTabSelected }) => {
+  const activeTab = tabs.find(tab => tab.id === activeId) || tabs[0];
+
   return (
     <div>
       <ul>
